@@ -1,0 +1,71 @@
+body {
+  margin: 0px;
+  font-family: 'Avenir', 'helvetica neue', helvetica, arial, sans-serif;
+}
+
+/* NAVBAR */
+
+.navbar {
+  background-color: white;
+  height: 50px;
+  display: flex;
+  z-index: 1;
+}
+
+.navbar-left {
+  width: 50vw;
+  height: 100%;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar-left h6{
+  margin: 0px 0px 0px 10vw;
+  font-size: 1.5em;
+
+}
+
+.navbar-right {
+  width: 50vw;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.navbar-right p a {
+  margin-right: 7vw;
+  padding-right: 0px;
+  text-decoration: none;
+  color: black;
+}
+
+#submit {
+  margin-right: 10vw;
+  background-color: #9230E1;
+  padding: 10px 50px 10px 50px;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 0px solid transparent;
+  color: white;
+}
+
+/* HERO */
+
+.hero {
+  background-color: #F3F3F3;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin: 0px;
+  font-size: 2.5em;
+}
+
+/* LIST */
