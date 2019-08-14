@@ -6,13 +6,18 @@ $.getJSON(url, function(data) {
      var link = this.url;
      var tagline = this.tagline;
      var image = this.image;
-     var html = "<div onclick=\"openWebsite('"+link+"');\" class=\"startup\"><div class=\"startup-left\" style='background-image: url(\""+image+"\");'></div><div class=\"startup-right\"><h2>"+name+"</h2><p>"+tagline+"</p></div></div>"
+     var html = "<div onclick=\"openWebsite('"+link+"','"+name+"');\" class=\"startup\"><div class=\"startup-left\" style='background-image: url(\""+image+"\");'></div><div class=\"startup-right\"><h2>"+name+"</h2><p>"+tagline+"</p></div></div>"
      /*var html = '<div class="startup"><div class="startup-left" style="background-image:url("'+image+'");"></div><div class="startup-right"><h2>'+name+'</h2><p>'+tagline+'</p></div></div>'*/
      $('.list').append(html);
   });
  });
 
 
-function openWebsite(a) {
+function openWebsite(a,b) {
   window.open(a);
+  gtag('event', 'click', {
+  'event_category': 'link-click',
+  'event_label': b,
+  'value': a
+});
 };

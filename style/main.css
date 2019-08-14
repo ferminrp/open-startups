@@ -3,6 +3,29 @@ body {
   font-family: 'Avenir', 'helvetica neue', helvetica, arial, sans-serif;
 }
 
+/* A PARTIR DE ACA SCROLLBAR */
+
+#style-1::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar
+{
+	width: 7px;
+	background-color: #F5F5F5;
+}
+
+#style-1::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+
+/* FIN SCROLLBAR */
+
 /* NAVBAR */
 
 .navbar {
@@ -10,6 +33,7 @@ body {
   height: 70px;
   display: flex;
   z-index: 1;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 .navbar-left {
@@ -66,6 +90,13 @@ body {
 h1 {
   margin: 0px;
   font-size: 2.5em;
+  text-align: center;
+  max-width: 80%;
+}
+
+.hero p {
+  text-align: center;
+  max-width: 80%;
 }
 
 /* LIST */
@@ -82,19 +113,26 @@ h1 {
 .startup {
   background-color: white;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
-  width: 30vw;
+  width: 383px;
   border-radius: 8px;
   margin-top: 3vh;
   margin-bottom: 3vh;
+  margin-left: 10px;
+  margin-right: 10px;
   height: 15vh;
+  cursor: pointer;
 }
 
 .startup-left {
   width: 50px;
   height: 50px;
+  min-width: 50px;
+  min-height: 50px;
   border-radius: 50%;
+  margin-left: 10px;
+  margin-right: 20px;
   background-color: #ccc;
   background-repeat: no-repeat no-repeat;
   background-size: cover;
@@ -103,8 +141,80 @@ h1 {
 
 .startup-right p{
   margin: 0px;
+  width: 80%;
 }
 
 .startup-right h2{
   margin: 0px;
+}
+
+/* CTA */
+
+.cta {
+  background-color: #F3F3F3;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+h3 {
+  margin: 0px;
+  font-size: 1.5em;
+  text-align: center;
+  max-width: 80%;
+}
+
+#submit-cta {
+  background-color: #9230E1;
+  padding: 12px 50px 12px 50px;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 0px solid transparent;
+  color: white;
+  margin-top: 20px;
+}
+
+/* NEWSLETTER */
+
+.newsletter {
+  background-color: #A3DED8;
+  color: white;
+  text-align: center;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.newsletter p {
+  margin: 0px;
+  color: #364258;
+  max-width: 90vw;
+  text-align: center;
+}
+
+.newsletter a {
+  font-weight: bold;
+}
+
+/* RESPONSIVENESS */
+
+@media (max-width: 550px) {
+  .navbar-right p{
+    display: none;
+  }
+  .navbar-left h6 {
+    font-size: 1em;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  .startup {
+    max-width: 90vw;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  }
 }
